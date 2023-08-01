@@ -49,8 +49,8 @@ namespace jogoRpg
                         Console.WriteLine($"Nível: {nivel}");
                         Console.WriteLine($"Experiência: {pontosExperiencia}/{experienciaNecessaria}");
                         Console.WriteLine($"Pontos de Vida: {pontosVida = 120}");
-                        Console.WriteLine($"Pontos de Ataque: {pontosAtaque = 5}");
-                        Console.WriteLine($"Pontos de Defesa: {pontosDefesa = 7}");
+                        Console.WriteLine($"Pontos de Ataque: {pontosAtaque = 10}");
+                        Console.WriteLine($"Pontos de Defesa: {pontosDefesa = 10}");
                         break;
 
                     case "2":
@@ -245,16 +245,16 @@ namespace jogoRpg
                                 nivel++;
                                 pontosExperiencia = 0; // Reinicia a experiência para o próximo nível
                                 experienciaNecessaria *= 2; // Dobra a experiência necessária a cada nível
-                                pontosVida += 10; // Aumenta os pontos de vida ao subir de nível
+                                pontosVida += 20; // Aumenta os pontos de vida ao subir de nível
 
                                 Console.WriteLine($"Parabéns! Você subiu para o nível {nivel}!");
                                 Console.WriteLine($"Experiência necessária para o próximo nível: {experienciaNecessaria}");
                                 Console.WriteLine($"Seus pontos de ataque aumentaram para {pontosAtaque}, seus pontos de defesa aumentaram para {pontosDefesa} e seus pontos de vida aumentaram para {pontosVida}.");
 
                                 Console.WriteLine("Escolha como deseja evoluir:");
-                                Console.WriteLine("1 - Aumentar Ataque");
-                                Console.WriteLine("2 - Aumentar Defesa");
-                                Console.WriteLine("3 - Aumentar Defesa e Ataque");
+                                Console.WriteLine("1 - Aumentar Ataque(Aumenta o ataque em 10 pontos)");
+                                Console.WriteLine("2 - Aumentar Defesa(Aumenta a defesa em 7 pontos)");
+                                Console.WriteLine("3 - Aumentar Defesa e Ataque(Aumenta o ataque em 4 pontos e a defesa em 3 pontos)");
                                 Console.Write("Escolha uma opção: ");
 
                                 string escolhaEvolucao = Console.ReadLine();
@@ -263,19 +263,19 @@ namespace jogoRpg
                                 {
                                     case "1":
                                         pontosAtaque += 10;
-                                        Console.WriteLine($"Seus pontos de ataque aumentaram para {pontosAtaque}.");
+                                        Console.WriteLine($"Seus pontos de ataque aumentaram para :{pontosAtaque}.");
                                         break;
 
                                     case "2":
                                         pontosDefesa += 7; 
-                                        Console.WriteLine($"Seus pontos de defesa aumentaram para {pontosDefesa}.");
+                                        Console.WriteLine($"Seus pontos de defesa aumentaram para:{pontosDefesa}.");
                                         break;
                                     case "3":
                                         pontosAtaque += 4; 
-                                        Console.WriteLine($"Seus pontos de ataque aumentaram para {pontosAtaque}.");
+                                        Console.WriteLine($"Seus pontos de ataque aumentaram para:{pontosAtaque}.");
 
                                         pontosDefesa += 3;
-                                        Console.WriteLine($"Seus pontos de defesa aumentaram para {pontosDefesa}.");
+                                        Console.WriteLine($"Seus pontos de defesa aumentaram para:{pontosDefesa}.");
                                         break;
 
                                     default:
